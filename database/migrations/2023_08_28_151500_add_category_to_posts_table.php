@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->after('id');
             
-            $table->foreign('category-id')
+            $table->foreign('category_id')
                   ->references('id')
-                  ->on('posts');
+                  ->on('categories');
         });
     }
 
@@ -28,7 +28,7 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
-            $table->dropForeign('posts_category_id_foreign');
+            $table->dropForeign('categories_category_id_foreign');
             $table->dropColumn('category_id');
         });
     }
