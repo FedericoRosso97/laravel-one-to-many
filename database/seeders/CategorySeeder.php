@@ -21,6 +21,8 @@ class CategorySeeder extends Seeder
             $NewCategory=New Category;
             $NewCategory->name= $category;//gli elementi cilcati dell'array
             $NewCategory->slug=Str::of($category)->slug('-');
+            $NewCategory->save();
+
           };
        
     }
