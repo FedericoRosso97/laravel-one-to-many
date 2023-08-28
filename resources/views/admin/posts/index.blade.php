@@ -10,7 +10,7 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Slug</th>
+                        <th scope="col">Category</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -26,7 +26,7 @@
                                 </strong>
                             </td>
                             <td>
-                                {{ $post->slug }}
+                                  {{$post->category->name}}
                             </td>
                             <td>
                                 <a href="{{ route('admin.posts.show', $post) }}" class="btn btn-sm btn-primary">
