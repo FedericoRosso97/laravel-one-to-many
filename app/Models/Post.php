@@ -15,4 +15,7 @@ class Post extends Model
         'description',
         'slug'
     ];
+    public function Category(){
+        return $this->belongsTo(Category::class);
+    }
 }
