@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         //
-        $catergories=[ 'News', 'Sport', 'Music', 'Art', 'Movies', 'Books', 'Games'];
+        $catergories=[ 'News', 'Sport', 'Music'];
          foreach($catergories as $category)
           {
             $NewCategory=New Category;
